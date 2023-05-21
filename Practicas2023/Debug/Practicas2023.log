@@ -1,0 +1,12 @@
+﻿  FinalAnim.cpp
+C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Practicas2023\include\shader_m.h(44,40): warning C4101: 'e': variable local sin referencia
+C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Practicas2023\include\modelAnim.h(104,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Practicas2023\include\modelAnim.h(520,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Practicas2023\FinalAnim.cpp(796,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Practicas2023\FinalAnim.cpp(797,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Practicas2023\FinalAnim.cpp(801,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Practicas2023\FinalAnim.cpp(802,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Practicas2023\FinalAnim.cpp(804,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Practicas2023\FinalAnim.cpp(805,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Practicas2023\FinalAnim.cpp(813,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  Practicas2023.vcxproj -> C:\Users\bebet\source\repos\Proyecto_CGIHC\Practicas2023\Debug\Practicas2023.exe
