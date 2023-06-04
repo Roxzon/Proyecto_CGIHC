@@ -1,0 +1,34 @@
+# 3ds Max Wavefront OBJ Exporter v0.99 - (c)2007 guruware
+# File Created: 04.06.2023 10:11:36
+
+newmtl leaf
+	Kd 0.5294 0.4314 0.0314
+	Ks 0.3500 0.3500 0.3500
+	Tr 0.0000
+	d 1.0000
+	Tf 0.0000 0.0000 0.0000
+	Pr 0.6800
+	Pm 0.0000
+	Pc 0.0000
+	Pcr 0.0000
+	Ni 1.5000
+	Ke 0.0000 0.0000 0.0000
+	illum 2
+	map_Kd matteuccia_struthiopteris_leaf_1_01_diffuse.jpg
+	map_d matteuccia_struthiopteris_leaf_1_05_opacity.jpg
+
+newmtl StonePlatform_Base
+	Kd 0.5250 0.5250 0.5250
+	Ks 0.3880 0.3880 0.3880
+	Tr 0.0000
+	d 1.0000
+	Tf 0.0000 0.0000 0.0000
+	Pr -1.5260
+	Pm 0.0000
+	Pc 0.0000
+	Pcr 0.0000
+	Ni 1.5000
+	Ke 0.0000 0.0000 0.0000
+	illum 2
+	map_Kd StonePlatforms_Base-Diffuse.png
+	map_Ks StonePlatform_Obj\StonePlatforms_Base-Specular.png

@@ -2,13 +2,13 @@
 D:\Uni\Décimo\Grafica\Practicas2023\include\shader_m.h(44,40): warning C4101: 'e': variable local sin referencia
 D:\Uni\Décimo\Grafica\Practicas2023\include\modelAnim.h(104,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 D:\Uni\Décimo\Grafica\Practicas2023\include\modelAnim.h(520,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(598,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(599,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(603,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(604,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(606,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(607,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(615,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(626,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(627,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(631,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(632,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(634,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(635,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\Grafica\Practicas2023\FinalAnim.cpp(643,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
 glfw3.lib(context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(init.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(init.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(input.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(input.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
