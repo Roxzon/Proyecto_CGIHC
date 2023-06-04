@@ -294,7 +294,11 @@ int main()
 	Model piso("resources/objects/piso/FWF.obj");
 	Model subpiso("resources/objects/piso/FFP2.obj");
 	Model muro("resources/objects/muro/wall_1.obj");
-
+	Model oso("resources/objects/habitats/bear.obj");
+	Model treeOsos("resources/objects/tree/yamaboushi_tan_6000_a_spr1.obj");
+	Model treeZebra("resources/objects/tree/Arbol7.obj");
+	Model zebra("resources/objects/habitats/zebra.obj");
+	Model pin("resources/objects/habitats/Pingu.obj");
 	//Model PinguinoCA("resources/objects/Animals2/Pinguino/CabezaPinguino1.obj");
 	//Model PinguinoPD("resources/objects/Animals2/Pinguino/PinguinoPatas1.obj");
 	//Model PinguinoPI("resources/objects/Animals2/Pinguino/PinguinoPatas2.obj");
@@ -458,6 +462,70 @@ int main()
 		staticShader.setMat4("view", view);
 		
 		////////////////////////////////////////////////////////////////////////////////////
+		/* NOTA: Si van a moverle algo a la escala, intenten moverle la escala a todos los objetos*/
+		/* Hábitats */
+		//Osos
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.05f));
+		staticShader.setMat4("model", model);
+		oso.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(61.0f, 0.0f, 30.0f));
+		model = glm::scale(model, glm::vec3(0.009f));
+		staticShader.setMat4("model", model);
+		treeOsos.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(60.0f, 0.0f, -20.0f));
+		model = glm::scale(model, glm::vec3(0.007f));
+		staticShader.setMat4("model", model);
+		treeOsos.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(57.0f, 0.0f, 5.0f));
+		model = glm::scale(model, glm::vec3(0.009f));
+		staticShader.setMat4("model", model);
+		treeOsos.Draw(staticShader);
+		//Cebras
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-70.0f, 0.0f, -90.0f));
+		model = glm::scale(model, glm::vec3(2.0f));
+		staticShader.setMat4("model", model);
+		treeZebra.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-80.0f, 0.0f, -70.0f));
+		model = glm::scale(model, glm::vec3(1.5f));
+		staticShader.setMat4("model", model);
+		treeZebra.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-80.0f, 0.0f, -47.0f));
+		model = glm::scale(model, glm::vec3(2.0f));
+		staticShader.setMat4("model", model);
+		treeZebra.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-40.0f, 0.0f, -55.0f));
+		model = glm::scale(model, glm::vec3(1.0f));
+		staticShader.setMat4("model", model);
+		treeZebra.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.05f));
+		staticShader.setMat4("model", model);
+		zebra.Draw(staticShader);
+		//Pingüinos
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.05f));
+		staticShader.setMat4("model", model);
+		pin.Draw(staticShader);
+		
 		//model = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 2.0f, 0.0f));
 		//model = glm::translate(model, glm::vec3(posXPin, posYPin, posZPin));
 		//tmp1 = model = glm::rotate(model, glm::radians(cuerpoPin), glm::vec3(0.0f, 1.0f, 0.0f));
@@ -480,7 +548,7 @@ int main()
 		//PinguinoPI.Draw(staticShader);
 		////////////////////////////////////////////////////////////////////////////////////
 
-		/* Piso del ambiente */
+		/* Elementos básicos del zoológico. */
 		//Muros.
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
