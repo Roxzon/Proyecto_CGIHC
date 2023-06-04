@@ -242,7 +242,7 @@ int main()
 	monitors = glfwGetPrimaryMonitor();
 	getResolution();
 
-	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "CGeIHC. Alea Iacta Est", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "CGeIHC. Zoológico virtual: Alea Iacta Est", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -291,7 +291,10 @@ int main()
 	skyboxShader.setInt("skybox", 0);
 
 	/* Modelos a cargar */
-	//Model piso("resources/objects/piso/");
+	Model piso("resources/objects/piso/FWF.obj");
+	Model subpiso("resources/objects/piso/FFP2.obj");
+	Model muro("resources/objects/muro/wall_1.obj");
+
 	//Model PinguinoCA("resources/objects/Animals2/Pinguino/CabezaPinguino1.obj");
 	//Model PinguinoPD("resources/objects/Animals2/Pinguino/PinguinoPatas1.obj");
 	//Model PinguinoPI("resources/objects/Animals2/Pinguino/PinguinoPatas2.obj");
@@ -478,7 +481,26 @@ int main()
 		////////////////////////////////////////////////////////////////////////////////////
 
 		/* Piso del ambiente */
+		//Muros.
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.05f));
+		staticShader.setMat4("model", model);
+		muro.Draw(staticShader);
+		
+		//Subzona de pinguinos
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.05f));
+		staticShader.setMat4("model", model);
+		subpiso.Draw(staticShader);
 
+		//Piso del ambiente.
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.05f));
+		staticShader.setMat4("model", model);
+		piso.Draw(staticShader);
 		
 		/* Dibujar skybox como último */
 		skyboxShader.use();
