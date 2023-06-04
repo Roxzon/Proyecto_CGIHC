@@ -1,0 +1,34 @@
+# 3ds Max Wavefront OBJ Exporter v0.99 - (c)2007 guruware
+# File Created: 04.06.2023 11:55:30
+
+newmtl Stone_Arch_Large___Base
+	Kd 0.3140 0.3140 0.3140
+	Ks 0.3730 0.3730 0.3730
+	Tr 0.0000
+	d 1.0000
+	Tf 0.0000 0.0000 0.0000
+	Pr -1.3860
+	Pm 0.0000
+	Pc 0.0000
+	Pcr 0.0000
+	Ni 1.5000
+	Ke 0.0000 0.0000 0.0000
+	illum 2
+	map_Kd StoneArchLarge_Base-Diffuse.png
+	map_Ks StoneArchLarge_Base-Specular.png
+
+newmtl Rock_07_Base
+	Kd 0.6200 0.6200 0.6200
+	Ks 0.7100 0.7100 0.7100
+	Tr 0.0000
+	d 1.0000
+	Tf 0.0000 0.0000 0.0000
+	Pr -0.5050
+	Pm 0.0000
+	Pc 0.0000
+	Pcr 0.0000
+	Ni 1.5000
+	Ke 0.0000 0.0000 0.0000
+	illum 2
+	map_Kd Rock07-Base-Diffuse.png
+	map_Ks Rock07-Base-Specular.png
