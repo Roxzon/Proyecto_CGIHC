@@ -299,6 +299,8 @@ int main()
 	Model treeZebra("resources/objects/tree/Arbol7.obj");
 	Model zebra("resources/objects/habitats/zebra.obj");
 	Model pin("resources/objects/habitats/Pingu.obj");
+	Model llama("resources/objects/habitats/llama.obj");
+	Model llamaTr("resources/objects/tree/Arbol4.obj");
 	//Model PinguinoCA("resources/objects/Animals2/Pinguino/CabezaPinguino1.obj");
 	//Model PinguinoPD("resources/objects/Animals2/Pinguino/PinguinoPatas1.obj");
 	//Model PinguinoPI("resources/objects/Animals2/Pinguino/PinguinoPatas2.obj");
@@ -526,6 +528,33 @@ int main()
 		staticShader.setMat4("model", model);
 		pin.Draw(staticShader);
 		
+		//Llamas
+		
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(20.0f, 0.0f, -90.0f));
+		model = glm::scale(model, glm::vec3(2.05f));
+		staticShader.setMat4("model", model);
+		llamaTr.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(15.0f, 0.0f, -47.0f));
+		model = glm::scale(model, glm::vec3(1.05f));
+		staticShader.setMat4("model", model);
+		llamaTr.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(50.0f, 0.0f, -52.0f));
+		model = glm::scale(model, glm::vec3(5.05f));
+		staticShader.setMat4("model", model);
+		llamaTr.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.05f));
+		staticShader.setMat4("model", model);
+		llama.Draw(staticShader);
+
 		//model = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 2.0f, 0.0f));
 		//model = glm::translate(model, glm::vec3(posXPin, posYPin, posZPin));
 		//tmp1 = model = glm::rotate(model, glm::radians(cuerpoPin), glm::vec3(0.0f, 1.0f, 0.0f));
