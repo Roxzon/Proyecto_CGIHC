@@ -301,6 +301,9 @@ int main()
 	Model pin("resources/objects/habitats/Pingu.obj");
 	Model llama("resources/objects/habitats/llama.obj");
 	Model llamaTr("resources/objects/tree/Arbol4.obj");
+
+	Model llamaC("resources/objects/llama/llama.obj");
+
 	//Model PinguinoCA("resources/objects/Animals2/Pinguino/CabezaPinguino1.obj");
 	//Model PinguinoPD("resources/objects/Animals2/Pinguino/PinguinoPatas1.obj");
 	//Model PinguinoPI("resources/objects/Animals2/Pinguino/PinguinoPatas2.obj");
@@ -528,24 +531,23 @@ int main()
 		staticShader.setMat4("model", model);
 		pin.Draw(staticShader);
 		
-		//Llamas
-		
+		//Llamas		
 
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(20.0f, 0.0f, -90.0f));
-		model = glm::scale(model, glm::vec3(2.05f));
+		model = glm::scale(model, glm::vec3(1.5f));
 		staticShader.setMat4("model", model);
 		llamaTr.Draw(staticShader);
 
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(15.0f, 0.0f, -47.0f));
-		model = glm::scale(model, glm::vec3(1.05f));
+		model = glm::scale(model, glm::vec3(1.5f));
 		staticShader.setMat4("model", model);
 		llamaTr.Draw(staticShader);
 
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(50.0f, 0.0f, -52.0f));
-		model = glm::scale(model, glm::vec3(5.05f));
+		model = glm::scale(model, glm::vec3(3.05f));
 		staticShader.setMat4("model", model);
 		llamaTr.Draw(staticShader);
 
@@ -554,6 +556,16 @@ int main()
 		model = glm::scale(model, glm::vec3(0.05f));
 		staticShader.setMat4("model", model);
 		llama.Draw(staticShader);
+
+		/////////////////////////////////////LLAMA//////////////////////////////////////////
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(60.0f, 0.0f, -100.0f));
+		model = glm::rotate(model, glm::radians(-45.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.4f));
+		staticShader.setMat4("model", model);
+		llamaC.Draw(staticShader);
+		////////////////////////////////////////////////////////////////////////////////////
+
 
 		//model = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 2.0f, 0.0f));
 		//model = glm::translate(model, glm::vec3(posXPin, posYPin, posZPin));
