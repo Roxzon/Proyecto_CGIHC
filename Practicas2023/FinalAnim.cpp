@@ -98,21 +98,22 @@ float	incXPin = 0.0f,
 float	posXllama = 60.0f,
 		posYllama = 0.0f,
 		posZllama = -100.0f;
+	
 
 float movLlama_x = 0.0f;
-float movLlama_z = -100.0f;
+float movLlama_z = 0.0f;
 float movLlama_xinc = 0.0f;
 float movLlama_zinc = 0.0f;
-float giroLlama = 0.0f;
-float giroLlamainc = 0.0f;
+float giroLlama = -45.0f;
+float giroLlamainc =0.0f;
 
 //
 int flag = 1;
 int flag2 = 0;
 
-#define MAX_FRAMES 9
+#define MAX_FRAMES 10
 int i_max_steps = 100;
-int i_curr_steps = 0;
+int i_curr_steps = 10;
 typedef struct _frame
 {
 	////Pinguino
@@ -142,7 +143,7 @@ typedef struct _frame
 }FRAME;
 
 FRAME KeyFrame[MAX_FRAMES];
-int FrameIndex = 5;			//introducir número en caso de tener Key guardados
+int FrameIndex = 10;			//introducir número en caso de tener Key guardados
 bool play = false;
 int playIndex = 0;
 
@@ -409,25 +410,33 @@ int main()
 
 
 	/////LLAMA/////
-	KeyFrame[0].movLlama_x = 5.0f;
-	KeyFrame[0].movLlama_z = -5.0f;
-	KeyFrame[0].giroLlama = 0;
+	KeyFrame[0].movLlama_x = -25.0f;
+	KeyFrame[0].movLlama_z = 20.0f;
+	KeyFrame[0].giroLlama = -45.0f;
 
-	KeyFrame[1].movLlama_x = 5.0f;
-	KeyFrame[1].movLlama_z = -5.0f;
-	KeyFrame[1].giroLlama = 0;
+	KeyFrame[1].movLlama_x = -25.0f;
+	KeyFrame[1].movLlama_z = 20.0f;
+	KeyFrame[1].giroLlama = -45.0f;
 
-	KeyFrame[2].movLlama_x = -5.0f;
-	KeyFrame[2].movLlama_z = -5.0f;
-	KeyFrame[2].giroLlama = 0;
+	KeyFrame[2].movLlama_x = -25.0f;
+	KeyFrame[2].movLlama_z = 20.0f;
+	KeyFrame[2].giroLlama = -45.0f;
 
-	KeyFrame[3].movLlama_x = -5.0f;
-	KeyFrame[3].movLlama_z = -5.0f;
-	KeyFrame[3].giroLlama = 0;
+	KeyFrame[3].movLlama_x = -25.0f;
+	KeyFrame[3].movLlama_z = 20.0f;
+	KeyFrame[3].giroLlama = -45.0f;
 
-	KeyFrame[4].movLlama_x = -5.0f;
-	KeyFrame[4].movLlama_z = -5.0f;
-	KeyFrame[4].giroLlama = 0;
+	KeyFrame[4].movLlama_x = -25.0f;
+	KeyFrame[4].movLlama_z = 20.0f;
+	KeyFrame[4].giroLlama = -45.0f;
+
+	KeyFrame[5].movLlama_x = -25.0f;
+	KeyFrame[5].movLlama_z = 20.0f;
+	KeyFrame[5].giroLlama = -45.0f;
+
+	KeyFrame[6].movLlama_x = -25.0f;
+	KeyFrame[6].movLlama_z = 20.0f;
+	KeyFrame[6].giroLlama = -45.0f;
 
 	/* Loop render */
 	while (!glfwWindowShouldClose(window))
@@ -625,7 +634,7 @@ int main()
 		/////////////////////////////////////LLAMA//////////////////////////////////////////
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(posXllama + movLlama_x, posYllama, posZllama + movLlama_z));
-		model = glm::rotate(model, glm::radians(-45.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(giroLlama), glm::vec3(0.0f, 1.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.4f));
 		staticShader.setMat4("model", model);
 		llamaC.Draw(staticShader);
