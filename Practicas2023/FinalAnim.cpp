@@ -93,6 +93,19 @@ float	incXPin = 0.0f,
 		incPataDDPin = 0.0f,
 		incPataDIPin = 0.0f;
 
+
+/////LAMA/////
+float	posXllama = 60.0f,
+		posYllama = 0.0f,
+		posZllama = -100.0f;
+
+float movLlama_x = 0.0f;
+float movLlama_z = -100.0f;
+float movLlama_xinc = 0.0f;
+float movLlama_zinc = 0.0f;
+float giroLlama = 0.0f;
+float giroLlamainc = 0.0f;
+
 //
 int flag = 1;
 int flag2 = 0;
@@ -118,6 +131,14 @@ typedef struct _frame
 	float rotRodIzq;
 	float giroMonito;
 
+	//KeyFrame para llama
+	float movLlama_x;
+	float movLlama_z;
+	float movLlama_xinc;
+	float movLlama_zinc;
+	float giroLlama;
+	float giroLlamainc;
+
 }FRAME;
 
 FRAME KeyFrame[MAX_FRAMES];
@@ -138,6 +159,12 @@ void saveFrame(void)
 	//KeyFrame[FrameIndex].pataDIPin = pataDIPin;
 	//KeyFrame[FrameIndex].cabezaPin = cabezaPin;
 
+
+	/////LAMA/////
+	KeyFrame[FrameIndex].movLlama_x = movLlama_x;
+	KeyFrame[FrameIndex].movLlama_z = movLlama_z;
+	KeyFrame[FrameIndex].giroLlama = giroLlama;
+
 	FrameIndex++;
 }
 
@@ -150,6 +177,11 @@ void resetElements(void)
 	//pataDDPin = KeyFrame[0].pataDDPin;
 	//pataDIPin = KeyFrame[0].pataDIPin;
 	//cabezaPin = KeyFrame[0].cabezaPin;
+
+	/////LAMA/////
+	movLlama_x = KeyFrame[0].movLlama_x;
+	movLlama_z = KeyFrame[0].movLlama_z;
+	giroLlama = KeyFrame[0].giroLlama;
 }
 
 void interpolation(void)
@@ -164,6 +196,12 @@ void interpolation(void)
 	//incPataDDPin = (KeyFrame[playIndex + 1].pataDDPin - KeyFrame[playIndex].pataDDPin) / i_max_steps;
 	//incPataDIPin = (KeyFrame[playIndex + 1].pataDIPin - KeyFrame[playIndex].pataDIPin) / i_max_steps;
 	////
+
+	/////LAMA/////
+	KeyFrame[playIndex].movLlama_xinc = (KeyFrame[playIndex + 1].movLlama_x - KeyFrame[playIndex].movLlama_x) / i_max_steps;
+	KeyFrame[playIndex].movLlama_zinc = (KeyFrame[playIndex + 1].movLlama_z - KeyFrame[playIndex].movLlama_z) / i_max_steps;
+	KeyFrame[playIndex].giroLlamainc = (KeyFrame[playIndex + 1].giroLlama - KeyFrame[playIndex].giroLlama) / i_max_steps;
+
 }
 
 
@@ -209,6 +247,11 @@ void animate(void)
 			//pataDIPin += incPataDIPin;
 			//pataDDPin += incPataDDPin;
 			////
+
+			///LLAMA//
+			movLlama_x += KeyFrame[playIndex].movLlama_xinc;
+			movAuto_z += KeyFrame[playIndex].movLlama_zinc;
+			giroLlama += KeyFrame[playIndex].giroLlamainc;
 
 			i_curr_steps++;
 		}
@@ -363,6 +406,28 @@ int main()
 		KeyFrame[i].rotRodIzq = 0;
 		KeyFrame[i].giroMonito = 0;
 	}*/
+
+
+	/////LLAMA/////
+	KeyFrame[0].movLlama_x = 5.0f;
+	KeyFrame[0].movLlama_z = -5.0f;
+	KeyFrame[0].giroLlama = 0;
+
+	KeyFrame[1].movLlama_x = 5.0f;
+	KeyFrame[1].movLlama_z = -5.0f;
+	KeyFrame[1].giroLlama = 0;
+
+	KeyFrame[2].movLlama_x = -5.0f;
+	KeyFrame[2].movLlama_z = -5.0f;
+	KeyFrame[2].giroLlama = 0;
+
+	KeyFrame[3].movLlama_x = -5.0f;
+	KeyFrame[3].movLlama_z = -5.0f;
+	KeyFrame[3].giroLlama = 0;
+
+	KeyFrame[4].movLlama_x = -5.0f;
+	KeyFrame[4].movLlama_z = -5.0f;
+	KeyFrame[4].giroLlama = 0;
 
 	/* Loop render */
 	while (!glfwWindowShouldClose(window))
@@ -559,7 +624,7 @@ int main()
 
 		/////////////////////////////////////LLAMA//////////////////////////////////////////
 		model = glm::mat4(1.0f);
-		model = glm::translate(model, glm::vec3(60.0f, 0.0f, -100.0f));
+		model = glm::translate(model, glm::vec3(posXllama + movLlama_x, posYllama, posZllama + movLlama_z));
 		model = glm::rotate(model, glm::radians(-45.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.4f));
 		staticShader.setMat4("model", model);

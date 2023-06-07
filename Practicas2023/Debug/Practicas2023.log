@@ -2,16 +2,27 @@
 C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\include\shader_m.h(44,40): warning C4101: 'e': variable local sin referencia
 C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\include\modelAnim.h(104,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\include\modelAnim.h(520,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(706,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(707,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(711,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(712,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(714,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(715,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(723,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(771,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(772,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(776,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(777,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(779,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(780,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(788,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  LINK : no se encontró C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\Debug\Practicas2023.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+glfw3.lib(context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(init.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(init.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(input.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(input.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(monitor.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(monitor.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(vulkan.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(vulkan.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(window.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(window.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_init.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_init.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(win32_joystick.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_joystick.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_monitor.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_monitor.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_time.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_time.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_thread.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_thread.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(win32_window.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_window.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(wgl_context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(wgl_context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(egl_context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(egl_context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(osmesa_context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(osmesa_context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
   Practicas2023.vcxproj -> C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\Debug\Practicas2023.exe
