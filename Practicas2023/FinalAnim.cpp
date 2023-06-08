@@ -116,14 +116,14 @@ int i_max_steps = 100;
 int i_curr_steps = 10;
 typedef struct _frame
 {
-	////Pinguino
-	//float posXPin;
-	//float posYPin;
-	//float posZPin;
-	//float cuerpoPin;
-	//float pataDDPin;
-	//float pataDIPin;
-	//float cabezaPin;
+	//Pinguino
+	float posXPin;
+	float posYPin;
+	float posZPin;
+	float cuerpoPin;
+	float pataDDPin;
+	float pataDIPin;
+	float cabezaPin;
 	//
 	//Variables para GUARDAR Key Frames
 	float posX;		//Variable para PosicionX
@@ -152,13 +152,13 @@ void saveFrame(void)
 	//printf("frameindex %d\n", FrameIndex);
 	std::cout << "Frame Index = " << FrameIndex << std::endl;
 
-	//KeyFrame[FrameIndex].posXPin = posXPin;
-	//KeyFrame[FrameIndex].posYPin = posYPin;
-	//KeyFrame[FrameIndex].posZPin = posZPin;
-	//KeyFrame[FrameIndex].cuerpoPin = cuerpoPin;
-	//KeyFrame[FrameIndex].pataDDPin = pataDDPin;
-	//KeyFrame[FrameIndex].pataDIPin = pataDIPin;
-	//KeyFrame[FrameIndex].cabezaPin = cabezaPin;
+	KeyFrame[FrameIndex].posXPin = posXPin;
+	KeyFrame[FrameIndex].posYPin = posYPin;
+	KeyFrame[FrameIndex].posZPin = posZPin;
+	KeyFrame[FrameIndex].cuerpoPin = cuerpoPin;
+	KeyFrame[FrameIndex].pataDDPin = pataDDPin;
+	KeyFrame[FrameIndex].pataDIPin = pataDIPin;
+	KeyFrame[FrameIndex].cabezaPin = cabezaPin;
 
 
 	/////LAMA/////
@@ -171,13 +171,13 @@ void saveFrame(void)
 
 void resetElements(void)
 {
-	//posXPin = KeyFrame[0].posXPin;
-	//posYPin = KeyFrame[0].posYPin;
-	//posZPin = KeyFrame[0].posZPin;
-	//cuerpoPin = KeyFrame[0].cuerpoPin;
-	//pataDDPin = KeyFrame[0].pataDDPin;
-	//pataDIPin = KeyFrame[0].pataDIPin;
-	//cabezaPin = KeyFrame[0].cabezaPin;
+	posXPin = KeyFrame[0].posXPin;
+	posYPin = KeyFrame[0].posYPin;
+	posZPin = KeyFrame[0].posZPin;
+	cuerpoPin = KeyFrame[0].cuerpoPin;
+	pataDDPin = KeyFrame[0].pataDDPin;
+	pataDIPin = KeyFrame[0].pataDIPin;
+	cabezaPin = KeyFrame[0].cabezaPin;
 
 	/////LAMA/////
 	movLlama_x = KeyFrame[0].movLlama_x;
@@ -188,14 +188,14 @@ void resetElements(void)
 void interpolation(void)
 {
 	////Pinguino
-	//incXPin = (KeyFrame[playIndex + 1].posXPin - KeyFrame[playIndex].posXPin) / i_max_steps;
-	//incYPin = (KeyFrame[playIndex + 1].posYPin - KeyFrame[playIndex].posYPin) / i_max_steps;
-	//incZPin = (KeyFrame[playIndex + 1].posZPin - KeyFrame[playIndex].posZPin) / i_max_steps;
+	incXPin = (KeyFrame[playIndex + 1].posXPin - KeyFrame[playIndex].posXPin) / i_max_steps;
+	incYPin = (KeyFrame[playIndex + 1].posYPin - KeyFrame[playIndex].posYPin) / i_max_steps;
+	incZPin = (KeyFrame[playIndex + 1].posZPin - KeyFrame[playIndex].posZPin) / i_max_steps;
 
-	//incCuerpoPin = (KeyFrame[playIndex + 1].cuerpoPin - KeyFrame[playIndex].cuerpoPin) / i_max_steps;
-	//incCabezaPin = (KeyFrame[playIndex + 1].cabezaPin - KeyFrame[playIndex].cabezaPin) / i_max_steps;
-	//incPataDDPin = (KeyFrame[playIndex + 1].pataDDPin - KeyFrame[playIndex].pataDDPin) / i_max_steps;
-	//incPataDIPin = (KeyFrame[playIndex + 1].pataDIPin - KeyFrame[playIndex].pataDIPin) / i_max_steps;
+	incCuerpoPin = (KeyFrame[playIndex + 1].cuerpoPin - KeyFrame[playIndex].cuerpoPin) / i_max_steps;
+	incCabezaPin = (KeyFrame[playIndex + 1].cabezaPin - KeyFrame[playIndex].cabezaPin) / i_max_steps;
+	incPataDDPin = (KeyFrame[playIndex + 1].pataDDPin - KeyFrame[playIndex].pataDDPin) / i_max_steps;
+	incPataDIPin = (KeyFrame[playIndex + 1].pataDIPin - KeyFrame[playIndex].pataDIPin) / i_max_steps;
 	////
 
 	/////LAMA/////
@@ -240,13 +240,13 @@ void animate(void)
 		else
 		{
 			////Pinguino
-			//posXPin += incXPin;
-			//posYPin += incYPin;
-			//posZPin += incZPin;
-			//cabezaPin += incCabezaPin;
-			//cuerpoPin += incCuerpoPin;
-			//pataDIPin += incPataDIPin;
-			//pataDDPin += incPataDDPin;
+			posXPin += incXPin;
+			posYPin += incYPin;
+			posZPin += incZPin;
+			cabezaPin += incCabezaPin;
+			cuerpoPin += incCuerpoPin;
+			pataDIPin += incPataDIPin;
+			pataDDPin += incPataDDPin;
 			////
 
 			///LLAMA//
@@ -345,13 +345,14 @@ int main()
 	Model pin("resources/objects/habitats/Pingu.obj");
 	Model llama("resources/objects/habitats/llama.obj");
 	Model llamaTr("resources/objects/tree/Arbol4.obj");
-
+	Model masrocas("resources/objects/habitats/Lozorros.obj");
 	Model llamaC("resources/objects/llama/llama.obj");
-
-	//Model PinguinoCA("resources/objects/Animals2/Pinguino/CabezaPinguino1.obj");
-	//Model PinguinoPD("resources/objects/Animals2/Pinguino/PinguinoPatas1.obj");
-	//Model PinguinoPI("resources/objects/Animals2/Pinguino/PinguinoPatas2.obj");
-	//Model PinguinoCU("resources/objects/Animals2/Pinguino/TorsoPinguino1.obj");
+	Model treeW("resources/objects/tree/Arbol1.obj");
+	Model PinguinoCA("resources/objects/Animals2/Pinguino/CabezaPinguino1.obj");
+	Model PinguinoPD("resources/objects/Animals2/Pinguino/PinguinoPatas1.obj");
+	Model PinguinoPI("resources/objects/Animals2/Pinguino/PinguinoPatas2.obj");
+	Model PinguinoCU("resources/objects/Animals2/Pinguino/TorsoPinguino1.obj");
+	Model zT("resources/objects/tree/Arbol6.obj");
 
 	//Inicialización de KeyFrames
 	std::ifstream archivo("AnimacionPin.txt");
@@ -361,36 +362,36 @@ int main()
 		std::string linea;
 
 		while (std::getline(archivo, linea)) {
-			//std::istringstream iss(linea);
-			//FRAME keyFrame;
-			//iss >> keyFrame.posXPin >> keyFrame.posYPin >> keyFrame.posZPin >> keyFrame.cuerpoPin >> keyFrame.cabezaPin >> keyFrame.pataDDPin >> keyFrame.pataDIPin;
-			//keyFrames.push_back(keyFrame);
+			std::istringstream iss(linea);
+			FRAME keyFrame;
+			iss >> keyFrame.posXPin >> keyFrame.posYPin >> keyFrame.posZPin >> keyFrame.cuerpoPin >> keyFrame.cabezaPin >> keyFrame.pataDDPin >> keyFrame.pataDIPin;
+			keyFrames.push_back(keyFrame);
 		}
 
 		archivo.close();
 
 		for (const FRAME& keyFrame : keyFrames) {
-			//std::cout << "posX: " << keyFrame.posXPin
-			//	<< ", posY: " << keyFrame.posYPin
-			//	<< ", posZ: " << keyFrame.posZPin
-			//	<< ", Cuerpo: " << keyFrame.cuerpoPin
-			//	<< ", Cabeza: " << keyFrame.cabezaPin
-			//	<< ", Pata1: " << keyFrame.pataDDPin
-			//	<< ", Pata2: " << keyFrame.pataDIPin << std::endl;
-			//std::cout << "-------------------------------------" << std::endl;
+			std::cout << "posX: " << keyFrame.posXPin
+				<< ", posY: " << keyFrame.posYPin
+				<< ", posZ: " << keyFrame.posZPin
+				<< ", Cuerpo: " << keyFrame.cuerpoPin
+				<< ", Cabeza: " << keyFrame.cabezaPin
+				<< ", Pata1: " << keyFrame.pataDDPin
+				<< ", Pata2: " << keyFrame.pataDIPin << std::endl;
+			std::cout << "-------------------------------------" << std::endl;
 		}
 
 		// Realiza la animación con los keyFrames leídos
 		int i = 0;
 		for (const FRAME& keyFrame : keyFrames) {
-			//KeyFrame[i].posXPin = keyFrame.posXPin;
-			//KeyFrame[i].posYPin = keyFrame.posYPin;
-			//KeyFrame[i].posZPin = keyFrame.posZPin;
-
-			//KeyFrame[i].cuerpoPin = keyFrame.cuerpoPin;
-			//KeyFrame[i].cabezaPin = keyFrame.cabezaPin;
-			//KeyFrame[i].pataDDPin = keyFrame.pataDDPin;
-			//KeyFrame[i].pataDIPin = keyFrame.pataDIPin;
+			KeyFrame[i].posXPin = keyFrame.posXPin;
+			KeyFrame[i].posYPin = keyFrame.posYPin;
+			KeyFrame[i].posZPin = keyFrame.posZPin;
+			
+			KeyFrame[i].cuerpoPin = keyFrame.cuerpoPin;
+			KeyFrame[i].cabezaPin = keyFrame.cabezaPin;
+			KeyFrame[i].pataDDPin = keyFrame.pataDDPin;
+			KeyFrame[i].pataDIPin = keyFrame.pataDIPin;
 			i++;
 		}
 	}
@@ -410,7 +411,7 @@ int main()
 
 
 	/////LLAMA/////
-	KeyFrame[0].movLlama_x = -25.0f;
+	/*KeyFrame[0].movLlama_x = -25.0f;
 	KeyFrame[0].movLlama_z = 20.0f;
 	KeyFrame[0].giroLlama = -45.0f;
 
@@ -436,7 +437,7 @@ int main()
 
 	KeyFrame[6].movLlama_x = -25.0f;
 	KeyFrame[6].movLlama_z = 20.0f;
-	KeyFrame[6].giroLlama = -45.0f;
+	KeyFrame[6].giroLlama = -45.0f;*/
 
 	/* Loop render */
 	while (!glfwWindowShouldClose(window))
@@ -543,6 +544,60 @@ int main()
 		////////////////////////////////////////////////////////////////////////////////////
 		/* NOTA: Si van a moverle algo a la escala, intenten moverle la escala a todos los objetos*/
 		/* Hábitats */
+		
+		//Lobos
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(49, 0.0f, 65.0f));
+		model = glm::scale(model, glm::vec3(1.0f));
+		staticShader.setMat4("model", model);
+		treeW.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(60.0f, 0.0f, 100.0f));
+		model = glm::scale(model, glm::vec3(0.5f));
+		staticShader.setMat4("model", model);
+		treeW.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(65.0f, 0.0f, 80.0f));
+		model = glm::scale(model, glm::vec3(0.3f));
+		staticShader.setMat4("model", model);
+		treeW.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(40.15f, 0.0f, 80.0f));
+		model = glm::scale(model, glm::vec3(2.0f));
+		staticShader.setMat4("model", model);
+		treeW.Draw(staticShader);
+
+		//Zorros
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.05f));
+		staticShader.setMat4("model", model);
+		masrocas.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-61.0f, 0.0f, 30.0f));
+		model = glm::scale(model, glm::vec3(1.0f));
+		staticShader.setMat4("model", model);
+		zT.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-80.0f, 0.0f, -20.0f));
+		model = glm::scale(model, glm::vec3(1.0f));
+		staticShader.setMat4("model", model);
+		zT.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-77.0f, 0.0f, 5.0f));
+		model = glm::scale(model, glm::vec3(1.0f));
+		staticShader.setMat4("model", model);
+		zT.Draw(staticShader);
+
+
+		
 		//Osos
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
@@ -641,26 +696,26 @@ int main()
 		////////////////////////////////////////////////////////////////////////////////////
 
 
-		//model = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 2.0f, 0.0f));
-		//model = glm::translate(model, glm::vec3(posXPin, posYPin, posZPin));
-		//tmp1 = model = glm::rotate(model, glm::radians(cuerpoPin), glm::vec3(0.0f, 1.0f, 0.0f));
-		//staticShader.setMat4("model", model);
-		//PinguinoCU.Draw(staticShader);
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 2.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(posXPin, posYPin, posZPin));
+		tmp1 = model = glm::rotate(model, glm::radians(cuerpoPin), glm::vec3(0.0f, 1.0f, 0.0f));
+		staticShader.setMat4("model", model);
+		PinguinoCU.Draw(staticShader);
 
-		//model = glm::translate(tmp1, glm::vec3(0.0f, 0.0f, 0.0f));
-		//model = glm::rotate(model, glm::radians(cabezaPin), glm::vec3(1.0f, 0.0f, 0.0f));
-		//staticShader.setMat4("model", model);
-		//PinguinoCA.Draw(staticShader);
+		model = glm::translate(tmp1, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(cabezaPin), glm::vec3(1.0f, 0.0f, 0.0f));
+		staticShader.setMat4("model", model);
+		PinguinoCA.Draw(staticShader);
 
-		//model = glm::translate(tmp1, glm::vec3(0.0f, 0.0f, 0.0f));
-		//model = glm::rotate(model, glm::radians(-pataDDPin), glm::vec3(1.0f, 0.0f, 1.0f));
-		//staticShader.setMat4("model", model);
-		//PinguinoPD.Draw(staticShader);
+		model = glm::translate(tmp1, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(-pataDDPin), glm::vec3(1.0f, 0.0f, 1.0f));
+		staticShader.setMat4("model", model);
+		PinguinoPD.Draw(staticShader);
 
-		//model = glm::translate(tmp1, glm::vec3(0.0f, 0.0f, 0.0f));
-		//model = glm::rotate(model, glm::radians(pataDIPin), glm::vec3(0.0f, 0.0f, 1.0f));
-		//staticShader.setMat4("model", model);
-		//PinguinoPI.Draw(staticShader);
+		model = glm::translate(tmp1, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(pataDIPin), glm::vec3(0.0f, 0.0f, 1.0f));
+		staticShader.setMat4("model", model);
+		PinguinoPI.Draw(staticShader);
 		////////////////////////////////////////////////////////////////////////////////////
 
 		/* Elementos básicos del zoológico. */

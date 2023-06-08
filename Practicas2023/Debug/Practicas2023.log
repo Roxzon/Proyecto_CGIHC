@@ -1,12 +1,15 @@
 ﻿  FinalAnim.cpp
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\include\shader_m.h(44,40): warning C4101: 'e': variable local sin referencia
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\include\modelAnim.h(104,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\include\modelAnim.h(520,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(780,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(781,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(785,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(786,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(788,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(789,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\FinalAnim.cpp(797,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-  Practicas2023.vcxproj -> C:\Users\pamem\OneDrive\Documentos\2023-2\Grafica\PROYECTO\Proyecto_CGIHC\Practicas2023\Debug\Practicas2023.exe
+D:\Uni\Décimo\PG\Practicas2023\include\shader_m.h(44,40): warning C4101: 'e': variable local sin referencia
+D:\Uni\Décimo\PG\Practicas2023\include\modelAnim.h(104,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\PG\Practicas2023\include\modelAnim.h(520,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\PG\Practicas2023\FinalAnim.cpp(835,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\PG\Practicas2023\FinalAnim.cpp(836,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\PG\Practicas2023\FinalAnim.cpp(840,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\PG\Practicas2023\FinalAnim.cpp(841,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\PG\Practicas2023\FinalAnim.cpp(843,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\PG\Practicas2023\FinalAnim.cpp(844,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Uni\Décimo\PG\Practicas2023\FinalAnim.cpp(852,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+glfw3.lib(input.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(input.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(monitor.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(monitor.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_window.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_window.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+  Practicas2023.vcxproj -> D:\Uni\Décimo\PG\Practicas2023\Debug\Practicas2023.exe
