@@ -353,6 +353,11 @@ int main()
 	Model PinguinoPI("resources/objects/Animals2/Pinguino/PinguinoPatas2.obj");
 	Model PinguinoCU("resources/objects/Animals2/Pinguino/TorsoPinguino1.obj");
 	Model zT("resources/objects/tree/Arbol6.obj");
+	Model Picu("resources/objects/Animals2/Pinguino/Pin/PinguinoCuerpo.obj");
+	Model Pipa("resources/objects/Animals2/Pinguino/Pin/PinguinoPatas.obj");
+	Model Os("resources/objects/Animals2/bear-obj.obj");
+	Model lob("resources/objects/Animals2/wolf-obj.obj");
+	Model ceb("resources/objects/Animals2/cebraMacho.obj");
 
 	//Inicialización de KeyFrames
 	std::ifstream archivo("AnimacionPin.txt");
@@ -571,6 +576,20 @@ int main()
 		staticShader.setMat4("model", model);
 		treeW.Draw(staticShader);
 
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(30.0f, 0.0f, 50.0f));
+		model = glm::rotate(model, glm::radians(-135.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.5f));
+		staticShader.setMat4("model", model);
+		lob.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(40.0f, 0.0f, 80.0f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(1.0f));
+		staticShader.setMat4("model", model);
+		lob.Draw(staticShader);
+
 		//Zorros
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
@@ -618,6 +637,19 @@ int main()
 		treeOsos.Draw(staticShader);
 
 		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(30.0f, 0.0f, -18.0f));
+		model = glm::scale(model, glm::vec3(0.5f));
+		staticShader.setMat4("model", model);
+		Os.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(30.0f, 0.0f, 20.0f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.6f));
+		staticShader.setMat4("model", model);
+		Os.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(57.0f, 0.0f, 5.0f));
 		model = glm::scale(model, glm::vec3(0.009f));
 		staticShader.setMat4("model", model);
@@ -653,6 +685,20 @@ int main()
 		model = glm::scale(model, glm::vec3(0.05f));
 		staticShader.setMat4("model", model);
 		zebra.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-20.0f, 0.0f, -80.0f));
+		model = glm::scale(model, glm::vec3(5.0f));
+		staticShader.setMat4("model", model);
+		ceb.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-20.0f, 0.0f, -60.0f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(5.0f));
+		staticShader.setMat4("model", model);
+		ceb.Draw(staticShader);
+
 		//Pingüinos
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
@@ -660,6 +706,16 @@ int main()
 		staticShader.setMat4("model", model);
 		pin.Draw(staticShader);
 		
+		model = glm::translate(tmp1, glm::vec3(-30.0f, 2.0f, 70.0f));
+		model = glm::scale(model, glm::vec3(1.0f));
+		staticShader.setMat4("model", model);
+		Picu.Draw(staticShader);
+
+		model = glm::translate(tmp1, glm::vec3(-30.0f, 2.0f, 70.0f));
+		model = glm::scale(model, glm::vec3(1.0f));
+		staticShader.setMat4("model", model);
+		Pipa.Draw(staticShader);
+
 		//Llamas		
 
 		model = glm::mat4(1.0f);
@@ -681,10 +737,18 @@ int main()
 		llamaTr.Draw(staticShader);
 
 		model = glm::mat4(1.0f);
-		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
-		model = glm::scale(model, glm::vec3(0.05f));
+		model = glm::translate(model, glm::vec3(30.0f, 0.0f, -52.0f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.5f));
 		staticShader.setMat4("model", model);
-		llama.Draw(staticShader);
+		llamaC.Draw(staticShader);
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(40.0f, 0.0f, -62.0f));
+		model = glm::rotate(model, glm::radians(70.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.5f));
+		staticShader.setMat4("model", model);
+		llamaC.Draw(staticShader);
 
 		/////////////////////////////////////LLAMA//////////////////////////////////////////
 		model = glm::mat4(1.0f);
@@ -693,29 +757,33 @@ int main()
 		model = glm::scale(model, glm::vec3(0.4f));
 		staticShader.setMat4("model", model);
 		llamaC.Draw(staticShader);
+
+		
 		////////////////////////////////////////////////////////////////////////////////////
+		//Pingüinos prototipo para uso de keyframes.
 
 
-		model = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 2.0f, 0.0f));
+
+		/*model = glm::translate(glm::mat4(1.0f), glm::vec3(-30.0f, 2.0f, 50.0f));
 		model = glm::translate(model, glm::vec3(posXPin, posYPin, posZPin));
 		tmp1 = model = glm::rotate(model, glm::radians(cuerpoPin), glm::vec3(0.0f, 1.0f, 0.0f));
 		staticShader.setMat4("model", model);
 		PinguinoCU.Draw(staticShader);
 
-		model = glm::translate(tmp1, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::translate(tmp1, glm::vec3(-30.0f, 2.0f, 50.0f));
 		model = glm::rotate(model, glm::radians(cabezaPin), glm::vec3(1.0f, 0.0f, 0.0f));
 		staticShader.setMat4("model", model);
 		PinguinoCA.Draw(staticShader);
 
-		model = glm::translate(tmp1, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::translate(tmp1, glm::vec3(-30.0f, 2.0f, 50.0f));
 		model = glm::rotate(model, glm::radians(-pataDDPin), glm::vec3(1.0f, 0.0f, 1.0f));
 		staticShader.setMat4("model", model);
 		PinguinoPD.Draw(staticShader);
 
-		model = glm::translate(tmp1, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::translate(tmp1, glm::vec3(-30.0f, 2.0f, 50.0f));
 		model = glm::rotate(model, glm::radians(pataDIPin), glm::vec3(0.0f, 0.0f, 1.0f));
 		staticShader.setMat4("model", model);
-		PinguinoPI.Draw(staticShader);
+		PinguinoPI.Draw(staticShader);*/
 		////////////////////////////////////////////////////////////////////////////////////
 
 		/* Elementos básicos del zoológico. */
