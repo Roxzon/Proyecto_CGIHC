@@ -358,6 +358,7 @@ int main()
 	Model Os("resources/objects/Animals2/bear-obj.obj");
 	Model lob("resources/objects/Animals2/wolf-obj.obj");
 	Model ceb("resources/objects/Animals2/cebraMacho.obj");
+	Model zorro("resources/objects/ZO/zorrom.obj");
 
 	//Inicialización de KeyFrames
 	std::ifstream archivo("AnimacionPin.txt");
@@ -615,8 +616,21 @@ int main()
 		staticShader.setMat4("model", model);
 		zT.Draw(staticShader);
 
-
+		//animal//
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-20.0f, 0.0f, -10.0f));
+		//model = glm::rotate(model, glm::radians(), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(1.0f));
+		staticShader.setMat4("model", model);
+		zorro.Draw(staticShader);
 		
+
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-30.0f, 0.0f, 20.0f));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(1.0f));
+		staticShader.setMat4("model", model);
+		zorro.Draw(staticShader);
 		//Osos
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
